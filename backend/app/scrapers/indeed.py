@@ -45,7 +45,7 @@ class IndeedScraper(BaseScraper):
             # Set user agent
             options.add_argument(f'user-agent={self.get_user_agent()}')
 
-            service = Service(ChromeDriverManager().install())
+            service = Service('/usr/bin/chromedriver')
             self.driver = webdriver.Chrome(service=service, options=options)
 
             # Remove webdriver flag
